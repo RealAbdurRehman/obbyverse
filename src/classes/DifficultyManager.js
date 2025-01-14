@@ -7,7 +7,7 @@ export default class DifficultyManager {
       platformDepth: 2.5,
       rotationRange: Math.PI / 20,
       lateralVariation: 2,
-      difficultyIncreaseDistance: 200,
+      difficultyIncreaseDistance: 125,
     };
 
     this.distanceTraveled = 0;
