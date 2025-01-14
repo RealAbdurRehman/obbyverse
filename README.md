@@ -12,7 +12,7 @@ Obbyverse is a thrilling, action-packed obstacle course game that immerses playe
 <p align="center">
 	<img src="" alt="Demo">
 	<br>
-	<a href="">Live demo</a>
+	<a href="https://obbyverse.vercel.app">Live demo</a>
 	<br>
 </p>
 
