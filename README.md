@@ -118,6 +118,6 @@ To contribute to **Obbyverse**, please follow these steps:
 
 ## License
 
-This game is open-source and licensed under the MIT License. See the [LICENSE]() file for details.
+This game is open-source and licensed under the MIT License. See the [LICENSE](https://github.com/RealAbdurRehman/obbyverse/blob/main/LICENSE) file for details.
 
 Can you conquer the impossible and emerge victorious, or will you fall short?
