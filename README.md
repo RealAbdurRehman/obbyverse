@@ -10,7 +10,7 @@
 Obbyverse is a thrilling, action-packed obstacle course game that immerses players in ever-changing, randomly generated challenges. Each course is a relentless test of skill, speed, and determination, where only the most agile and tenacious can survive. With no second chances, you’ll face a series of increasingly difficult obstacles that demand fast reflexes, precision, and an unwavering will to push forward.
 
 <p align="center">
-	<img src="" alt="Demo">
+	<img src="https://cloud-3df9xzhve-hack-club-bot.vercel.app/0img1.jpeg" alt="Demo">
 	<br>
 	<a href="https://obbyverse.vercel.app">Live demo</a>
 	<br>
@@ -50,8 +50,8 @@ Obbyverse is a thrilling, action-packed obstacle course game that immerses playe
 
 ## 📷 In-Game Shots
 
-![Obbyverse Screenshot 1]()
-![Obbyverse Screenshot 2]()
+![Obbyverse Screenshot 1](https://cloud-263r93isj-hack-club-bot.vercel.app/0img2.jpeg)
+![Obbyverse Screenshot 2](https://cloud-goz5rjwig-hack-club-bot.vercel.app/0img3.jpeg)
 
 ## Technologies
 
