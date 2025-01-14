@@ -247,7 +247,6 @@ export default class Game {
         offset: { value: 0.005 },
         vignetteIntensity: { value: 0.4 },
         time: { value: 0 },
-        scanlineIntensity: { value: 0.03 },
       },
       vertexShader: `
         varying vec2 vUv;
@@ -261,7 +260,6 @@ export default class Game {
         uniform float offset;
         uniform float vignetteIntensity;
         uniform float time;
-        uniform float scanlineIntensity;
         varying vec2 vUv;
         
         void main() {
@@ -272,9 +270,6 @@ export default class Game {
           vec4 cb = texture2D(tDiffuse, uv - vec2(offset, 0.0));
           
           vec4 color = vec4(cr.r, cga.g, cb.b, cga.a);
-
-          float scanline = sin(uv.y * 800.0 + time) * scanlineIntensity;
-          color.rgb += scanline;
 
           float vignette = 1.0 - smoothstep(0.5, 1.0, length(uv - 0.5) * 1.8 * vignetteIntensity);
           color.rgb *= mix(2.0, vignette, 1.0);
