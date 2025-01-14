@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An increasingly challenging, endless 3D obstacle course where the only goal is to push your limits and see how far you can go." />
+    <title>OBBYVERSE</title>
+    <link rel="icon" type="image/x-icon" href="/Icon/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/keyboard-css@1.2.4/dist/css/main.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="loading-screen">
+      <div class="crt-effect"></div>
+      <div class="scanlines"></div>
+      <div class="vignette"></div>
+      <div class="platform-container"></div>
+      <div id="loading-content">
+        <h1 class="game-title">OBBY<span>VERSE</span></h1>
+        <div id="loading-progress">
+          <div id="loading-bar"></div>
+        </div>
+        <div id="loading-percentage">0%</div>
+      </div>
+      <div class="tip-container">
+        <div class="tip-label">TIP</div>
+        <div class="tip-text">Use WASD to move and SPACE to jump. Time your jumps carefully!</div>
+      </div>
+    </div>
+    <div id="pause">
+      <div class="pause-content">
+        <div class="pause-symbol">
+          <div class="pause-bar"></div>
+          <div class="pause-bar"></div>
+        </div>
+        <h1>PAUSED</h1>
+        <div class="pause-info">
+          <div class="pause-stat">LEVEL<span id="pause-level">0</span></div>
+          <div class="pause-stat">SCORE<span id="pause-score">0</span></div>
+          <div class="pause-stat">TIME<span id="pause-time">00:00</span></div>
+        </div>
+        <div class="pause-tip">Press P to Resume</div>
+      </div>
+      <div class="pause-overlay"></div>
+      <div class="vcr-effect"></div>
+      <div class="pause-scanlines"></div>
+      <div class="pause-flicker"></div>
+    </div>
+    <div class="controls controls-temporary">
+      <p class="control-label">Move</p>
+      <div class="key-row">
+        <kbd class="kbc-button">W</kbd>
+      </div>
+      <div class="strafe-keys key-row">
+        <kbd class="kbc-button">A</kbd>
+        <kbd class="kbc-button">S</kbd>
+        <kbd class="kbc-button">D</kbd>
+      </div>
+      <p class="control-label">Sprint</p>
+      <kbd class="kbc-button key-row">Shift</kbd>
+      <p class="control-label">Jump</p>
+      <kbd class="kbc-button key-row key-space">Space</kbd>
+      <div class="similar-keys">
+        <p class="control-label">Pause / Unpause</p>
+        <kbd class="kbc-button key-row">P</kbd>
+        <p class="control-label">Controls</p>
+        <kbd class="kbc-button key-row">C</kbd>
+      </div>
+      <p class="control-label">Escape Pointer Lock</p>
+      <kbd class="kbc-button key-row">Esc</kbd>
+      <p class="control-label">Enter Pointer Lock</p>
+      <figure class="mouse-controls">
+        <img src="/Controls/lmb.png" alt="Left Mouse Button." class="mouse-button" />
+        <figcaption class="mouse-name">* Left Mouse Button</figcaption>
+      </figure>
+      <div class="controls-text">Hold C anytime to view the controls</div>
+    </div>
+    <div id="controls" class="controls" style="opacity: 0;">
+      <p class="control-label">Move</p>
+      <div class="key-row">
+        <kbd class="kbc-button">W</kbd>
+      </div>
+      <div class="strafe-keys key-row">
+        <kbd class="kbc-button">A</kbd>
+        <kbd class="kbc-button">S</kbd>
+        <kbd class="kbc-button">D</kbd>
+      </div>
+      <p class="control-label">Sprint</p>
+      <kbd class="kbc-button key-row">Shift</kbd>
+      <p class="control-label">Jump</p>
+      <kbd class="kbc-button key-row key-space">Space</kbd>
+      <div class="similar-keys">
+        <p class="control-label">Pause / Unpause</p>
+        <kbd class="kbc-button key-row">P</kbd>
+        <p class="control-label">Controls</p>
+        <kbd class="kbc-button key-row">C</kbd>
+      </div>
+      <p class="control-label">Escape Pointer Lock</p>
+      <kbd class="kbc-button key-row">Esc</kbd>
+      <p class="control-label">Enter Pointer Lock</p>
+      <figure class="mouse-controls">
+        <img src="/Controls/lmb.png" alt="Left Mouse Button." class="mouse-button" />
+        <figcaption class="mouse-name">* Left Mouse Button</figcaption>
+      </figure>
+    </div>
+    <div id="crosshair"></div>
+    <div id="hud">
+      <div class="hud-container">
+        <div class="corner-accent accent-tl"></div>
+        <div class="corner-accent accent-bl"></div>
+        <div class="data-line line-top"></div>
+        <div class="data-line line-bottom"></div>
+        <div class="hud-item">
+          <div class="hud-label">LEVEL</div>
+          <div class="hud-value" id="hud-level">0</div>
+        </div>
+        <div class="hud-item">
+          <div class="hud-label">SCORE</div>
+          <div class="hud-value" id="hud-score">0</div>
+        </div>
+      </div>
+      <div class="hud-container">
+        <div class="corner-accent accent-tl"></div>
+        <div class="corner-accent accent-bl"></div>
+        <div class="data-line line-top"></div>
+        <div class="data-line line-bottom"></div>
+        <div class="hud-item">
+          <div class="hud-label">TIME</div>
+          <div class="hud-value" id="hud-time">00:00</div>
+        </div>
+      </div>
+    </div>
+    <div id="death-screen">
+      <div class="death-screen-content">
+        <div class="glitch-text">YOU FELL</div>
+        <div class="stats-container">
+          <div class="stat">
+            <span class="stat-label">LEVEL</span>
+            <span class="stat-value" id="death-level">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">SCORE</span>
+            <span class="stat-value" id="death-score">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">TIME</span>
+            <span class="stat-value" id="death-time">00:00</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">DISTANCE TRAVELLED</span>
+            <span class="stat-value" id="death-distance">0</span>
+          </div>
+        </div>
+        <div class="stars-container-death">
+          <div class="stars-label-death">STARS EARNED</div>
+          <div class="stars-wrapper-death" id="stars-display-death">
+            <i class="fa-solid fa-star star-death"></i>
+            <i class="fa-solid fa-star star-death"></i>
+            <i class="fa-solid fa-star star-death"></i>
+            <i class="fa-solid fa-star star-death"></i>
+            <i class="fa-solid fa-star star-death"></i>
+            <i class="fa-solid fa-star star-death"></i>
+            <i class="fa-solid fa-star star-death"></i>
+          </div>
+        </div>
+        <button id="restart" class="cyber-button">TRY AGAIN</button>
+      </div>
+      <div class="crt-effect"></div>
+      <div class="crt-lines"></div>
+      <div class="death-screen-overlay"></div>
+    </div>
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>
