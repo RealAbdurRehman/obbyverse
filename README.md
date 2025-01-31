@@ -76,7 +76,7 @@ To contribute to **Obbyverse**, please follow these steps:
 
    - Navigate to the project directory and install the required dependencies using **pnpm**:
      ```bash
-     cd mariner
+     cd obbyverse
      pnpm install
      ```
 
