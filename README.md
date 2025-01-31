@@ -69,7 +69,7 @@ To contribute to **Obbyverse**, please follow these steps:
 
    - Clone your fork to your local machine using:
      ```bash
-     git clone https://github.com/yourusername/obyverse.git
+     git clone https://github.com/yourusername/obbyverse.git
      ```
 
 3. **Install dependencies**:
